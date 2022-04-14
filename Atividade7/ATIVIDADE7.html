@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade7 - JÉSSICA</title>
+
+<body>
+    <script>
+
+    //variáveis 
+    var human = parseInt (prompt("Para jogar, escolha o número: Pedra (1), Papel (2) ou Tesoura (3) ?"));
+    var compt = parseInt (Math.random()*10);
+
+    // condições opção computador
+    if(compt < 3){
+      compt = 1;
+      }
+    else if(compt >= 3 && compt < 6){
+      compt = 2;
+      }
+    else{
+      compt = 3;
+      }
+
+        alert("Você escolheu: " + human)
+        alert("O computador escolheu: " + compt);
+            
+   // condições jokenpô
+   if(human > 3 || human < 0){
+       alert("Erro. Número não especificado para escolha")
+   }  
+   else if(human == 1 && compt == 3 || human == 2 && compt == 1 || human == 3 && compt == 2){
+     alert("Você ganhou!");
+   } 
+   else if(human == 1 && compt == 2 || human == 2 && compt == 3 || human == 3 && compt == 1){
+     alert("Você perdeu!");
+   }
+   else if(human == 1 && compt == 1 || human == 2 && compt == 2 || human == 3 && compt == 3){
+     alert("Empatou!");
+  }
+
+</script>
+</body>
+</head>
+</html>
